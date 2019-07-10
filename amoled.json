@@ -4,6 +4,7 @@
   "description": "Special AMOLED optimized map style", 
   "attributes": {
     "level": 1,
+    "totalSupply": 1500
   },
   "external_url": "https://bulvrdapp.com/map_style", 
   "background_color": "000000"
