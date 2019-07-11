@@ -1,0 +1,12 @@
+{
+  "name": "BLVD Map G O L D E N . W O R L D",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/giveaways/gold_world/gold_world.jpg", 
+  "description": "T H E  G O L D E N . W O R L D", 
+  "attributes": {
+    "mapLevel": 5,
+    "totalSupply": 5,
+    "season": 0
+  },
+  "external_url": "https://bulvrdapp.com/map_collectibles", 
+  "background_color": "000000"
+}
