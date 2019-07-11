@@ -1,0 +1,12 @@
+{
+  "name": "BLVD Map Bright Visions",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_1/bright_visions/bright_visions.jpg", 
+  "description": "Limited map style inspired by BULVRD app accent colors", 
+  "attributes": {
+    "mapLevel": 2,
+    "totalSupply": 500,
+    "season": 1
+  },
+  "external_url": "https://bulvrdapp.com/map_collectibles", 
+  "background_color": "000000"
+}

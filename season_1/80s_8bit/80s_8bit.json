@@ -1,0 +1,12 @@
+{
+  "name": "BLVD Map 80s 8bit",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_1/80s_8bit/80s_8bit.jpg", 
+  "description": "Limited map style inspired by the 80s 8bit a e s t h e t i c", 
+  "attributes": {
+    "mapLevel": 3,
+    "totalSupply": 250,
+    "season": 1
+  },
+  "external_url": "https://bulvrdapp.com/map_collectibles", 
+  "background_color": "000000"
+}

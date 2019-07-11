@@ -1,0 +1,12 @@
+{
+  "name": "BLVD Map Red Devil",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_1/red_devil/red_devil.jpg", 
+  "description": "Limited all red map style", 
+  "attributes": {
+    "mapLevel": 3,
+    "totalSupply": 250,
+    "season": 1
+  },
+  "external_url": "https://bulvrdapp.com/map_collectibles", 
+  "background_color": "000000"
+}

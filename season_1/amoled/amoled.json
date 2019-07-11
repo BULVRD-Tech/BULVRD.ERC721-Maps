@@ -1,11 +1,12 @@
 {
   "name": "BLVD Map AMOLED",
-  "image": "", 
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_1/amoled/amoled.jpg", 
   "description": "Special AMOLED optimized map style", 
   "attributes": {
-    "level": 1,
-    "totalSupply": 1500
+    "mapLevel": 1,
+    "totalSupply": 1500,
+    "season": 1
   },
-  "external_url": "https://bulvrdapp.com/map_style", 
+  "external_url": "https://bulvrdapp.com/map_collectibles", 
   "background_color": "000000"
 }
