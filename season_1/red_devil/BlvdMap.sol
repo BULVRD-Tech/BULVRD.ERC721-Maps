@@ -97,7 +97,7 @@ contract TradeableERC721Token is ERC721Full, Ownable {
  * Creature - a contract for my non-fungible creatures.
  */
 contract BLVDMap is TradeableERC721Token {
-  constructor(address _proxyRegistryAddress) TradeableERC721Token("BLVD Red Devil", "BLVDM", _proxyRegistryAddress) public {  }
+  constructor(address _proxyRegistryAddress) TradeableERC721Token("BLVD Map Red Devil", "BLVDM", _proxyRegistryAddress) public {  }
 
   function baseTokenURI() public view returns (string memory) {
     return "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_1/red_devil/red_devil.json";
