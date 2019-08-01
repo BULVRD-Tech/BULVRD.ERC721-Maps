@@ -1,0 +1,12 @@
+{
+  "name": "BLVD Map Satellite",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_1/satellite/satellite.jpg", 
+  "description": "Satellite map styling for those looking for an aerial view.", 
+  "attributes": {
+    "mapLevel": 1,
+    "totalSupply": 10000,
+    "season": 1
+  },
+  "external_url": "https://bulvrdapp.com/map_collectibles", 
+  "background_color": "000000"
+}
