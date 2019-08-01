@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.9;
 
 import 'github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol';
 import 'github.com/OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol';
@@ -93,8 +93,8 @@ contract TradeableERC721Token is ERC721Full, Ownable {
 }
 
 /**
- * @title Creature
- * Creature - a contract for my non-fungible creatures.
+ * @title BLVDMap
+ * BLVDMap - a contract for my non-fungible BLVDMap.
  */
 contract BLVDMap is TradeableERC721Token {
   constructor(address _proxyRegistryAddress) TradeableERC721Token("BLVD Map Bright Visions", "BLVDM", _proxyRegistryAddress) public {  }
