@@ -1,0 +1,14 @@
+{
+  "name": "BLVD Map OpenSea",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/partners/opensea/opensea.jpg", 
+  "description": "Celebrating launching collecitble map styles with OpenSea. This map style is themed to the OpenSea branding.", 
+  "attributes": {
+    "mapLevel": 5,
+    "totalSupply": 5,
+    "season": 0,
+    "styleUrl": "mapbox://styles/bulvrdapp/cjys75gwe09841cphx8htn83u",
+    "buildingHex": "#23b6c6"
+  },
+  "external_url": "https://bulvrdapp.com/map_styles", 
+  "background_color": "23b6c6"
+}
