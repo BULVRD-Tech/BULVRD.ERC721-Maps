@@ -5,10 +5,10 @@
   "attributes": {
     "mapLevel": 2,
     "totalSupply": 500,
-    "season": 1,
-    "styleUrl": "mapbox://styles/bulvrdapp/cjxfbi5o81g8q1cqxdq88ven7",
-    "buildingHex": "#890063"
+    "season": 1
   },
   "external_url": "https://bulvrdapp.com/map_styles", 
-  "background_color": "890063"
+  "background_color": "890063",
+  "styleUrl": "mapbox://styles/bulvrdapp/cjxfbi5o81g8q1cqxdq88ven7",
+  "buildingHex": "#890063"
 }
