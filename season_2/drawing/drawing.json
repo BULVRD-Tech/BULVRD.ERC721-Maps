@@ -1,0 +1,14 @@
+{
+  "name": "BLVD Map Scribble",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/drawing/drawing.png", 
+  "description": "1 of 1 BULVRD map style, scribbled together.", 
+  "attributes": {
+    "mapLevel": 5,
+    "totalSupply": 1,
+    "season": 0
+  },
+  "external_url": "https://bulvrdapp.com/map_styles", 
+  "background_color": "A5A5A5",
+  "styleUrl": "mapbox://styles/bulvrdapp/cjzsv47ar0c981cqehehirqgf",
+  "buildingHex": "#D1D1D1"
+}
