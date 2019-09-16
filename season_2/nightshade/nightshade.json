@@ -1,0 +1,14 @@
+{
+  "name": "BLVD Map Nightshade",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/nightshade/nightshade.png", 
+  "description": "Inspired by the cool brisk nights of fall, a BULVRD map style with almost 50 shades of purple.", 
+  "attributes": {
+    "mapLevel": 4,
+    "totalSupply": 125,
+    "season": 2
+  },
+  "external_url": "https://bulvrdapp.com/map_styles", 
+  "background_color": "241f33",
+  "styleUrl": "mapbox://styles/bulvrdapp/cjyslpv0z0oqx1coxalcdr2nh",
+  "buildingHex": "#241f33"
+}
