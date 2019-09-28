@@ -1,0 +1,14 @@
+{
+  "name": "BLVD Map Halloween 2019",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/halloween_2019/halloween_2019.png", 
+  "description": "Bring in the 2019 Halloween season with this Halloween inspired map style. ", 
+  "attributes": {
+    "mapLevel": 4,
+    "totalSupply": 125,
+    "season": 2
+  },
+  "external_url": "https://bulvrdapp.com/map_styles", 
+  "background_color": "A5A5A5",
+  "styleUrl": "mapbox://styles/bulvrdapp/cjzsv47ar0c981cqehehirqgf",
+  "buildingHex": "#D1D1D1"
+}
