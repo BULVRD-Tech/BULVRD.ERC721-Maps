@@ -25,7 +25,7 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     //STYLE objects with ID that can be minted
     mapping (uint256 => STYLE) _styles;
     //Alias each token ID to a style type
-    mapping (uint256 => unint256) _tokenIdToStyle;
+    mapping (uint256 => uint256) _tokenIdToStyle;
     
     //Event for STYLE updates
     event NewMapStyleAdded(uint id, uint maxMint, uint totalMinted, string metaUrl);
@@ -52,26 +52,41 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     */
   function bulkMintArray(address[] memory receivers, uint256 _styleId) public onlyOwner {
      for (uint256 i = 0; i < receivers.length; i++) {
-        mintTo(_to, _styleId);
+        mintTo(receivers[i], _styleId);
      }
   }
-
-  /**
+  
+        /**
     * @dev Mints a token to an address with a tokenURI.
     * @param _to address of the future owner of the token
     */
   function mintTo(address _to, uint256 _styleId) public onlyOwner {
     uint256 _newTokenId = _getNextTokenId();
-    STYLE _style = styleFromStyleId(_styleId);
-    require(style.maxMint < style.totalMinted, "The max tokens for this style have already been minted!");
-    _tokenIdToStyle[_newTokenId] = _styleId
-    _mint(_to, newTokenId);
+    STYLE memory _style = styleFromStyleId(_styleId);
+    require(_style.maxMint < _style.totalMinted, "The max tokens for this style have already been minted!");
+    _tokenIdToStyle[_newTokenId] = _styleId;
+    _mint(_to, _newTokenId);
     _incrementTokenId(_style);
   }
 
-  function _incrementTokenId(STYLE _style) private  {
+  function _incrementTokenId(STYLE memory _style) private  {
     _style.totalMinted++;
-    _currentTokenId++;
+    _totalSupply++;
+  }
+  
+  //To update if setting custom uri is opened
+    function updateStyleUri(uint256 _styleId, string memory _uri) public onlyOwner{
+        STYLE memory _style = styleFromStyleId(_styleId);
+        _style.metaUrl = _uri;
+        emit MapStyleUriUpdated(_styleId, _uri);
+    }
+  
+  /**
+    * @dev calculates the next token ID based on value of _currentTokenId 
+    * @return uint256 for the next token ID
+    */
+  function _getNextTokenId() private view returns (uint256) {
+    return _totalSupply.add(1);
   }
 
     //Returns the metadata uri for the token
@@ -80,26 +95,32 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     } 
 
     //Returns STYLE object based on the styleId
-    function styleFromStyleId(uint256 _styleId) external view returns (STYLE memory) {
+    function styleFromStyleId(uint256 _styleId) internal view returns (STYLE memory) {
         return _styles[_styleId];
     }
 
     //Returns STYLE object based on the tokenId
-    function styleObjectForTokenId(uint256 _tokenId) external view returns (STYLE memory) {
+    function styleObjectForTokenId(uint256 _tokenId) internal view returns (STYLE memory) {
         return _styles[_tokenIdToStyle[_tokenId]];
+    }
+    
+     //Returns STYLE object based on the styleId
+    function styleMetaFromStyleId(uint256 _styleId) public view returns (uint id, uint maxMint, uint totalMinted, string memory metaUrl) {
+        STYLE memory _style = styleFromStyleId(_styleId);
+        return (_style.id, _style.maxMint, _style.totalMinted, _style.metaUrl);
+    }
+
+    //Returns STYLE object based on the tokenId
+    function styleMetaObjectForTokenId(uint256 _tokenId) public view returns (uint id, uint maxMint, uint totalMinted, string memory metaUrl) {
+        STYLE memory _style = _styles[_tokenIdToStyle[_tokenId]];
+        return (_style.id, _style.maxMint, _style.totalMinted, _style.metaUrl);
     }
 
     //Add a new mintable STYLE 
-    function addNewStyle(uint256 _id, uint _maxMint, uint _totalMint, string _metaUrl) public onlyOwner {
+    function addNewStyle(uint256 _id, uint _maxMint, uint _totalMint, string memory _metaUrl) public onlyOwner {
         STYLE memory style = STYLE(_id, _maxMint, _totalMint, _metaUrl);
         _styles[_id] = style;
         emit NewMapStyleAdded(_id, _maxMint, _totalMint, _metaUrl);
-    }
-
-    //To update if setting custom uri is opened
-    function updateStyleUri(uint256 _styleId, string _uri) public onlyOwner{
-        styleFromStyleId[_styleId].metaUrl = _uri;
-        emit MapStyleUriUpdated(_styleId, _uri);
     }
     
     function getBalanceThis() view public returns(uint){
