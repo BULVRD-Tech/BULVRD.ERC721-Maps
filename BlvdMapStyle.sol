@@ -63,22 +63,21 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     */
   function mintTo(address _to, uint256 _styleId) public onlyOwner {
     uint256 _newTokenId = _getNextTokenId();
-    STYLE memory _style = styleFromStyleId(_styleId);
-    require(_style.maxMint < _style.totalMinted, "The max tokens for this style have already been minted!");
+    STYLE storage _style = styleFromStyleId(_styleId);
+    require(_style.totalMinted < _style.maxMint, "The max tokens for this style have already been minted!");
     _tokenIdToStyle[_newTokenId] = _styleId;
     _mint(_to, _newTokenId);
-    _incrementTokenId(_style);
+    _incrementTokenId(_styleId);
   }
 
-  function _incrementTokenId(STYLE memory _style) private  {
-    _style.totalMinted++;
+  function _incrementTokenId(uint256 _styleId) private  {
+    _styles[_styleId].totalMinted++;
     _totalSupply++;
   }
   
   //To update if setting custom uri is opened
     function updateStyleUri(uint256 _styleId, string memory _uri) public onlyOwner{
-        STYLE memory _style = styleFromStyleId(_styleId);
-        _style.metaUrl = _uri;
+        _styles[_styleId].metaUrl = _uri;
         emit MapStyleUriUpdated(_styleId, _uri);
     }
   
@@ -96,24 +95,24 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     } 
 
     //Returns STYLE object based on the styleId
-    function styleFromStyleId(uint256 _styleId) internal view returns (STYLE memory) {
+    function styleFromStyleId(uint256 _styleId) internal view returns (STYLE storage) {
         return _styles[_styleId];
     }
 
     //Returns STYLE object based on the tokenId
-    function styleObjectForTokenId(uint256 _tokenId) internal view returns (STYLE memory) {
+    function styleObjectForTokenId(uint256 _tokenId) internal view returns (STYLE storage) {
         return _styles[_tokenIdToStyle[_tokenId]];
     }
     
      //Returns STYLE object based on the styleId
     function styleMetaFromStyleId(uint256 _styleId) public view returns (uint id, uint maxMint, uint totalMinted, string memory metaUrl) {
-        STYLE memory _style = styleFromStyleId(_styleId);
+        STYLE storage _style = styleFromStyleId(_styleId);
         return (_style.id, _style.maxMint, _style.totalMinted, _style.metaUrl);
     }
 
     //Returns STYLE object based on the tokenId
     function styleMetaObjectForTokenId(uint256 _tokenId) public view returns (uint id, uint maxMint, uint totalMinted, string memory metaUrl) {
-        STYLE memory _style = _styles[_tokenIdToStyle[_tokenId]];
+        STYLE storage _style = _styles[_tokenIdToStyle[_tokenId]];
         return (_style.id, _style.maxMint, _style.totalMinted, _style.metaUrl);
     }
 
