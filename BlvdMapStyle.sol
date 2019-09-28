@@ -33,8 +33,8 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
 
     address proxyRegistryAddress;
     
-    constructor(string memory _name, string memory _symbol, address _proxyRegistryAddress) ERC721Full(_name, _symbol) public {
-        proxyRegistryAddress = _proxyRegistryAddress;
+    constructor(string memory _name, string memory _symbol) ERC721Full(_name, _symbol) public {
+        
     }
  
   /**
@@ -123,6 +123,11 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
         emit NewMapStyleAdded(_id, _maxMint, _totalMint, _metaUrl);
     }
     
+    //Add a new mintable STYLE 
+    function updateProxyAddress(address _proxy) public onlyOwner {
+        proxyRegistryAddress = _proxy;
+    }
+    
     function getBalanceThis() view public returns(uint){
         return address(this).balance;
     }
@@ -159,5 +164,5 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
  * Customize in-app experiences in BULVRD app offerings https://bulvrdapp.com/#app
  */
 contract MapStyle is TradeableERC721Token {
-  constructor(address _proxyRegistryAddress) TradeableERC721Token("BLVD Map Style 2.0", "BLVDM", _proxyRegistryAddress) public {  }
+  constructor() TradeableERC721Token("BLVD Map Style 2.0", "BLVDM") public {  }
 }
