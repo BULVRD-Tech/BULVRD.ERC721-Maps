@@ -31,7 +31,8 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     event NewMapStyleAdded(uint id, uint maxMint, uint totalMinted, string metaUrl);
     event MapStyleUriUpdated(uint id, string metaUrl);
 
-    address proxyRegistryAddress;
+    address public proxyRegistryAddress;
+    address public gatewayAddress;
     
     constructor(string memory _name, string memory _symbol) ERC721Full(_name, _symbol) public {
         
@@ -123,9 +124,18 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
         emit NewMapStyleAdded(_id, _maxMint, _totalMint, _metaUrl);
     }
     
-    //Add a new mintable STYLE 
+    //Update proxya address, mainly used for OpenSea
     function updateProxyAddress(address _proxy) public onlyOwner {
         proxyRegistryAddress = _proxy;
+    }
+    
+    //Update gateway address, for possible sidechain use
+    function updateGatewayAddress(address _gateway) public onlyOwner {
+        gatewayAddress = _gateway;
+    }
+    
+    function depositToGateway(uint tokenId) public {
+        safeTransferFrom(msg.sender, gatewayAddress, tokenId);
     }
     
     function getBalanceThis() view public returns(uint){
