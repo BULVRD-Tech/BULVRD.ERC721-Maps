@@ -32,7 +32,7 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     event MapStyleUriUpdated(uint id, string metaUrl);
 
     address public proxyRegistryAddress;
-    address public gatewayAddress;
+    address public gatewayAddress = address(0x0);
     
     constructor(string memory _name, string memory _symbol) ERC721Full(_name, _symbol) public {
         
@@ -123,7 +123,7 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
         emit NewMapStyleAdded(_id, _maxMint, _totalMint, _metaUrl);
     }
     
-    //Update proxya address, mainly used for OpenSea
+    //Update proxy address, mainly used for OpenSea
     function updateProxyAddress(address _proxy) public onlyOwner {
         proxyRegistryAddress = _proxy;
     }
@@ -134,6 +134,7 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     }
     
     function depositToGateway(uint tokenId) public {
+        require(gatewayAddress != address(0x0), "Gateway Address has not been set yet!");
         safeTransferFrom(msg.sender, gatewayAddress, tokenId);
     }
     
@@ -149,20 +150,12 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     /**
    * Override isApprovedForAll to whitelist user's OpenSea proxy accounts to enable gas-less listings.
    */
-  function isApprovedForAll(
-    address owner,
-    address operator
-  )
-    public
-    view
-    returns (bool)
-  {
+  function isApprovedForAll(address owner, address operator) public view returns (bool){
     // Whitelist OpenSea proxy contract for easy trading.
     ProxyRegistry proxyRegistry = ProxyRegistry(proxyRegistryAddress);
     if (address(proxyRegistry.proxies(owner)) == operator) {
         return true;
     }
-
     return super.isApprovedForAll(owner, operator);
   }
 }
