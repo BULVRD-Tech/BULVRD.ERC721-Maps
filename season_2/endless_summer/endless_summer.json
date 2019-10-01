@@ -5,7 +5,8 @@
   "attributes": {
     "mapLevel": 2,
     "totalSupply": 500,
-    "season": 2
+    "season": 2,
+    "styleId": 4
   },
   "external_url": "https://bulvrdapp.com/map_styles", 
   "background_color": "72244d",
