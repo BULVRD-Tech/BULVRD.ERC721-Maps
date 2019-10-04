@@ -1,0 +1,15 @@
+{
+  "name": "BLVD Map Nomekop",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/giveaways/nomekop/nomekop.png", 
+  "description": "Limited edition collectible map style inspired by Nomekop Go. Only airdropped to BULVRD HODLrs.", 
+  "attributes": {
+    "mapLevel": 5,
+    "totalSupply": 9999,
+    "season": 2,
+    "styleId": 6
+  },
+  "external_url": "https://bulvrdapp.com/map_styles", 
+  "background_color": "8ff0c8",
+  "styleUrl": "mapbox://styles/bulvrdapp/cjzdj9tji35l61co8hw990elk",
+  "buildingHex": "#8ff0c8"
+}
