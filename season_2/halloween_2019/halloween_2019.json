@@ -3,8 +3,8 @@
   "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/halloween_2019/halloween_2019.png", 
   "description": "Bring in the 2019 Halloween season with this Halloween inspired map style. ", 
   "attributes": {
-    "mapLevel": 4,
-    "totalSupply": 125,
+    "mapLevel": 3,
+    "totalSupply": 500,
     "season": 2,
     "styleId": 3
   },
