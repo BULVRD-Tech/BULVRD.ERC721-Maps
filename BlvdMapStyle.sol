@@ -93,6 +93,21 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     function tokenURI(uint256 _tokenId) external view returns (string memory) {
         return _styles[_tokenIdToStyle[_tokenId]].metaUrl;
     } 
+    
+    //Returns the metadata uri for the given styleId
+    function tokenURIForStyle(uint256 _styleId) external view returns (string memory) {
+        return _styles[_styleId].metaUrl;
+    } 
+    
+    //Returns the maxMint for the given styleId
+    function maxMintForStyle(uint256 _styleId) external view returns (uint256) {
+        return _styles[_styleId].maxMint;
+    } 
+    
+    //Returns the totalMinted for the given styleId
+    function totalMintForStyle(uint256 _styleId) external view returns (uint256) {
+        return _styles[_styleId].totalMinted;
+    } 
 
     //Returns STYLE object based on the styleId
     function styleFromStyleId(uint256 _styleId) internal view returns (STYLE storage) {
