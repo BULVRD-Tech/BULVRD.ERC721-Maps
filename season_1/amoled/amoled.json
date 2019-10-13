@@ -1,12 +1,28 @@
 {
   "name": "BLVD Map AMOLED",
   "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_1/amoled/amoled.jpg", 
-  "description": "Special AMOLED optimized map style", 
-  "attributes": {
-    "mapLevel": 1,
-    "totalSupply": 1500,
-    "season": 1
-  },
+  "description": "Special AMOLED optimized map style",
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "season", 
+      "value": 1
+    },
+    {
+      "trait_type": "level", 
+      "value": 1
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "supply", 
+      "value": 1500
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "map_id", 
+      "value": 0
+    }
+  ],
   "external_url": "https://bulvrdapp.com/map_styles", 
   "background_color": "000000",
   "styleUrl": "mapbox://styles/bulvrdapp/cjxuuggbo1j651cqtchnjw3y0",
