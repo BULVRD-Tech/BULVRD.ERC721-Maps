@@ -2,12 +2,27 @@
   "name": "BLVD Map Digital Midnight",
   "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/digital_midnight/dm.png", 
   "description": "BLVD Collectible map style for late night drives. Inspired by scifi digital maps.", 
-  "attributes": {
-    "mapLevel": 4,
-    "totalSupply": 100,
-    "season": 2,
-    "styleId": 5
-  },
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "season", 
+      "value": 2
+    },
+    {
+      "trait_type": "level", 
+      "value": 4
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "supply", 
+      "value": 100
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "map_id", 
+      "value": 5
+    }
+  ],
   "external_url": "https://bulvrdapp.com/map_styles", 
   "background_color": "0f4f64",
   "styleUrl": "mapbox://styles/bulvrdapp/ck1cka40b051e1cocc4i14atz",
