@@ -2,11 +2,27 @@
   "name": "BLVD Map G O L D E N . W O R L D",
   "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/giveaways/gold_world/gold_world.jpg", 
   "description": "T H E  G O L D E N . W O R L D", 
-  "attributes": {
-    "mapLevel": 5,
-    "totalSupply": 5,
-    "season": 0
-  },
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "season", 
+      "value": 1
+    },
+    {
+      "trait_type": "level", 
+      "value": 5
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "supply", 
+      "value": 5
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "map_id", 
+      "value": 0
+    }
+  ],
   "external_url": "https://bulvrdapp.com/map_styles", 
   "background_color": "FFD700",
   "styleUrl": "mapbox://styles/bulvrdapp/cjxy058i00dl41dnv4pxxpf5e",
