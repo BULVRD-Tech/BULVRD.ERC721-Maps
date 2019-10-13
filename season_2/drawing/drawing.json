@@ -2,12 +2,27 @@
   "name": "BLVD Map Scribble",
   "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/drawing/drawing.png", 
   "description": "1 of 1 BULVRD map style, scribbled together.", 
-  "attributes": {
-    "mapLevel": 5,
-    "totalSupply": 1,
-    "season": 0,
-    "styleId": 1
-  },
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "season", 
+      "value": 2
+    },
+    {
+      "trait_type": "level", 
+      "value": 5
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "supply", 
+      "value": 1
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "map_id", 
+      "value": 1
+    }
+  ],
   "external_url": "https://bulvrdapp.com/map_styles", 
   "background_color": "A5A5A5",
   "styleUrl": "mapbox://styles/bulvrdapp/cjzsv47ar0c981cqehehirqgf",
