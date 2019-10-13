@@ -2,12 +2,27 @@
   "name": "BLVD Map Endless Summer",
   "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/endless_summer/endless_summer.png", 
   "description": "Keep summer alive with this map theme inspired by a classic summer sunset at the beach", 
-  "attributes": {
-    "mapLevel": 2,
-    "totalSupply": 1000,
-    "season": 2,
-    "styleId": 4
-  },
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "season", 
+      "value": 2
+    },
+    {
+      "trait_type": "level", 
+      "value": 2
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "supply", 
+      "value": 1000
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "map_id", 
+      "value": 4
+    }
+  ],
   "external_url": "https://bulvrdapp.com/map_styles", 
   "background_color": "72244d",
   "styleUrl": "mapbox://styles/bulvrdapp/ck13450it0oyk1cqvyik8yftv",
