@@ -32,7 +32,7 @@ contract TradeableERC721Token is ERC721Full, Ownable, Pausable {
     event MapStyleUriUpdated(uint id, string metaUrl);
 
     //Initial Proxy for OpenSea
-    address public proxyRegistryAddress = address(0xa5409ec958c83c3f309868babaca7c86dcb077c1);
+    address public proxyRegistryAddress = address(0xa5409ec958C83C3f309868babACA7c86DCB077c1);
     address public gatewayAddress = address(0x0);
     
     constructor(string memory _name, string memory _symbol) ERC721Full(_name, _symbol) public {
