@@ -1,0 +1,34 @@
+{
+  "name": "BLVD Map Frozen Wonderland",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/frozen_wonderland/map.png", 
+  "description": "Bring in the 2019 holiday season with this limited edition frozen wonderland map style. ", 
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "season", 
+      "value": 2
+    },
+    {
+      "trait_type": "level", 
+      "value": 4
+    },
+    {
+      "trait_type": "year", 
+      "value": 2019
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "supply", 
+      "value": 25
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "map_id", 
+      "value": 8
+    }
+  ],
+  "external_url": "https://bulvrdapp.com/map_styles_s2/", 
+  "background_color": "19c2fa",
+  "styleUrl": "mapbox://styles/bulvrdapp/ck2mxvcd80tvh1cpg3ro81ruj",
+  "buildingHex": "#19c2fa"
+}
