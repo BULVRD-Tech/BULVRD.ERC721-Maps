@@ -1,0 +1,34 @@
+{
+  "name": "BLVD Map North Pole",
+  "image": "https://raw.githubusercontent.com/BULVRD-Tech/BULVRD.ERC721-Maps/master/season_2/north_pole/map.png", 
+  "description": "Bring in the 2019 holiday season with this rare Christmas / North Pole map style. Uses map data to create a dynamic world with gifts, food, and winter forest.", 
+  "attributes": [
+    {
+      "display_type": "number", 
+      "trait_type": "season", 
+      "value": 2
+    },
+    {
+      "trait_type": "level", 
+      "value": 5
+    },
+    {
+      "trait_type": "year", 
+      "value": 2019
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "supply", 
+      "value": 3
+    },
+    {
+      "display_type": "number", 
+      "trait_type": "map_id", 
+      "value": 7
+    }
+  ],
+  "external_url": "https://bulvrdapp.com/map_styles_s2/", 
+  "background_color": "e0f3f5",
+  "styleUrl": "mapbox://styles/bulvrdapp/ck2mzny7y0sw71cp7qq1dzy0i",
+  "buildingHex": "#9cbcc2"
+}
