@@ -30,5 +30,6 @@
   "external_url": "https://bulvrdapp.com/map_styles_s2/", 
   "background_color": "e0f3f5",
   "styleUrl": "mapbox://styles/bulvrdapp/ck2mzny7y0sw71cp7qq1dzy0i",
-  "buildingHex": "#9cbcc2"
+  "buildingHex": "#9cbcc2",
+  "youtube_url" : "https://youtu.be/TzVS2yWiu0A"
 }
