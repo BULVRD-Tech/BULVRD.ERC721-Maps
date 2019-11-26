@@ -9,6 +9,14 @@
       "value": 1
     },
     {
+      "trait_type": "name", 
+      "value": "80s 8bit"
+    },
+    {
+      "trait_type": "Style", 
+      "value": "Night"
+    },
+    {
       "trait_type": "level", 
       "value": 3
     },

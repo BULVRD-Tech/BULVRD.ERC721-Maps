@@ -9,6 +9,14 @@
       "value": 1
     },
     {
+      "trait_type": "name", 
+      "value": "G O L D E N  W O R L D"
+    },
+    {
+      "trait_type": "Style", 
+      "value": "Day"
+    },
+    {
       "trait_type": "level", 
       "value": 5
     },

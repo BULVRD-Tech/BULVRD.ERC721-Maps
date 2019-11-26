@@ -9,6 +9,14 @@
       "value": 1
     },
     {
+      "trait_type": "name", 
+      "value": "Bright Visions"
+    },
+    {
+      "trait_type": "Style", 
+      "value": "Day"
+    },
+    {
       "trait_type": "level", 
       "value": 2
     },
